@@ -16,9 +16,9 @@ function TextUpdaterNode({ data, isConnectable }) {
         position={Position.Top}
         isConnectable={isConnectable}
       />
-      <div>
+      <div className="py-2">
         <label htmlFor="text">Text:</label>
-        <input id="text" name="text" onChange={onChange} className="nodrag" />
+        <div className="border rounded-sm outline-none nodrag"></div>
       </div>
       <Handle
         type="source"

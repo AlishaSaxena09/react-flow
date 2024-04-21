@@ -15,12 +15,7 @@ import "./App.css";
 const nodeTypes = { textUpdater: TextUpdaterNode };
 
 const initialNodes = [
-  {
-    id: "node-1",
-    type: "textUpdater",
-    position: { x: 0, y: 0 },
-    data: { value: 123 },
-  },
+  { id: "1", position: { x: 0, y: 100 }, data: { label: "1" } },
   { id: "2", position: { x: 0, y: 100 }, data: { label: "2" } },
 ];
 const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
