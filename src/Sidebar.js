@@ -24,17 +24,19 @@ const Sidebar = () => {
 
   return (
     <aside>
-      <div className="flex items-center px-2 pb-2 border-b text-md border-gray">
-        <span
-          onClick={() => setIsText(!isText)}
-          className="font-light cursor-pointer text-md material-symbols-outlined opacity-60 hover:opacity-40"
-        >
-          arrow_back
-        </span>
-        <span className="m-auto opacity-60">Message</span>
-      </div>
       {isText ? (
-        <div className="flex flex-col justify-center gap-4 px-4 py-4">
+        <div className="flex flex-col justify-center gap-4 px-4 ">
+          <div className="flex items-center px-2 pb-2 border-b text-md border-gray">
+            {text && (
+              <span
+                onClick={() => setIsText(!isText)}
+                className="font-light cursor-pointer text-md material-symbols-outlined opacity-60 hover:opacity-40"
+              >
+                arrow_back
+              </span>
+            )}
+            <span className="m-auto opacity-60">Message</span>
+          </div>
           <span className="text-xs">Text</span>
           <textarea
             onChange={handleChange}
@@ -52,7 +54,7 @@ const Sidebar = () => {
           </button>
         </div>
       ) : (
-        <div className="flex flex-col gap-4 px-4 ">
+        <div className="flex flex-col gap-4 px-4 py-4">
           {textData.map((ele) => {
             return (
               <div
@@ -64,6 +66,13 @@ const Sidebar = () => {
               </div>
             );
           })}
+          <button
+            type="button"
+            onClick={() => setIsText(!isText)}
+            className="flex flex-col items-center justify-center gap-4 p-2 text-xs rounded-lg w-fit hover:opacity-60"
+          >
+            + Add Text
+          </button>
         </div>
       )}
     </aside>
