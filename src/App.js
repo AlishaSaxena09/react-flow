@@ -39,7 +39,7 @@ const App = () => {
   // Callback function for adding edges between nodes
   const onConnect = useCallback(
     (params) => setEdges((eds) => addEdge(params, eds)),
-    []
+    [setEdges]
   );
 
   // Callback function for handling drag over event
@@ -73,7 +73,7 @@ const App = () => {
 
       setNodes((nds) => nds.concat(newNode));
     },
-    [reactFlowInstance]
+    [reactFlowInstance, setNodes]
   );
 
   return (
