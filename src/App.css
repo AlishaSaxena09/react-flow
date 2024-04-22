@@ -6,20 +6,6 @@
   height: 100vh;
 }
 
-.text-updater-node {
-  /* height: 50px; */
-  border: 1px solid #eee;
-  padding: 5px;
-  border-radius: 5px;
-  background: white;
-}
-
-.text-updater-node label {
-  display: block;
-  color: #777;
-  font-size: 12px;
-}
-
 /*  */
 
 .dndflow {
@@ -49,14 +35,6 @@
   justify-content: center;
   align-items: center;
   cursor: grab;
-}
-
-.dndflow .dndnode.input {
-  border-color: #0041d0;
-}
-
-.dndflow .dndnode.output {
-  border-color: #ff0072;
 }
 
 .dndflow .reactflow-wrapper {
